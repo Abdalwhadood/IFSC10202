@@ -1,4 +1,3 @@
-
 num1 = float(input("Enter First Number: "))
 
 operator = input("Enter Operator (+,-,*,/): ")
@@ -18,8 +17,11 @@ elif operator == '*':
     print(num1, "*", num2, "=", result)
 
 elif operator == '/':
-    result = num1 / num2
-    print(num1, "/", num2, "=", result)
+    if num2 == 0:
+        print("Error: Division by zero is not allowed")
+    else:
+        result = num1 / num2
+        print(num1, "/", num2, "=", result)
 
 else:
     print("Invalid Operator")
